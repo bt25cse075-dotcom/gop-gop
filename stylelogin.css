@@ -1,0 +1,113 @@
+body{
+    background-color: #F2F0E8;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif; 
+}
+.container{
+    display: flex;
+    height: 500px;
+    width: 800px;
+     box-shadow: 0 4px 12px rgba(104, 112, 39, 0.3);
+       border-radius: 0 50px 50px 0;
+
+}
+.left{
+    background-color:#C2C98A ;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+       
+    
+}
+.identity{
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.student,.admin,.faculty{
+    background-color:#C2C98A ;
+ border:0;
+padding: 20px;
+border-radius:20px ;
+}
+.student:hover,.admin:hover,.faculty:hover{
+    background-color: #E8E5D8;
+    cursor: pointer;
+    color: #687027;
+    transition: .3s;
+}
+.student:active,.admin:active,.faculty:active{
+    background-color:#C2C98A ;
+    transition: .3s;
+}
+input[type="email"],input[type="password"]{
+    height:20px;
+    padding: 5px;
+    width: 250px;
+}
+
+.right{
+   background-color: #E8E5D8; 
+   padding:60px;
+   width: 50%;
+   border-radius: 0 50px 50px 0;
+   padding-top: 0;
+}
+.right h1{
+    color: #687027;
+    font-size: 40px;
+    
+}
+.logo img{
+    height: 90px;
+}
+.lefttext{
+    margin-top: 100px;
+}
+.lefttext h2{
+    margin: 0;
+    color: #495114;
+    
+    
+}
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3a4010;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  background-color: #687027;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;        /* stops icon box from squishing */
+}
+
+.icon i {
+  color: #C2C98A;
+  font-size: 16px;
+}
