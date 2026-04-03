@@ -18,6 +18,7 @@ background: radial-gradient(ellipse at top left, #ffffff 0%, #e5eccc 50%, #C2C98
        border-radius: 0 50px 50px 0;
        box-sizing: border-box;
        overflow: hidden;
+       background-color: #E8E5D8;
 }
 .container:hover{
      box-shadow: 0 0 19px #a0ad32;
@@ -32,6 +33,7 @@ background: radial-gradient(ellipse at top left, #ffffff 0%, #e5eccc 50%, #C2C98
     display: flex;
     flex-direction: column;
     padding: 29px;  
+    border-radius: 0 100px 100px 0;
 }
 .lefttext h2:hover {
     transform: scale(1.05);
@@ -75,7 +77,7 @@ input[type="email"],input[type="password"]{
     background-color: #E8E5D8;
     color: black;
     font-size: larger;
-    transition: .9s;
+    transition: .6s;
 /* transform: translatey(-8px);
 transform: scale(1.1); */
 
