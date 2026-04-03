@@ -93,6 +93,7 @@ transition: .5s;
     border: none;
     border-radius: 6px;
     height: 25px;
+    padding: 10px;
 
 }
 .input input::placeholder{
