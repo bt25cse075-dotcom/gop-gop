@@ -1,3 +1,24 @@
+:root {
+  /* === PAR Timetable — Earthy Forest Palette === */
+  --color-sidebar:        #546B41;
+  --color-card-dark:      #546B41;
+  --color-bar-dark:       #3d4f30;
+  --color-bar-mid:        #99AD7A;
+  --color-surface:        #FFFFFF;
+  --color-page-bg:        #FFF8EC;
+  --color-border:         #e8dfc8;
+  --color-muted:          #DCCCAC;
+  --color-text-primary:   #2a3520;
+  --color-text-secondary: #6b7a5a;
+  --color-text-on-dark:   #FFF8EC;
+  --color-growth:         #4a8c5c;
+  --color-decline:        #c0513a;
+  --color-bar-selected:   #f0e9d8;
+  --color-day-selected:   #546B41;
+  --color-accent:         #99AD7A;
+  --color-logout:         #c0513a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +27,7 @@
 }
 
 body {
-  background: #F2F2F2;
+  background: var(--color-page-bg);
 }
 
 .navbar {
@@ -14,8 +35,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 14px 30px;
-  background: #FFFFFF;
-  border-bottom: 1px solid #E5E5E5;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -24,7 +45,7 @@ body {
 .logo {
   font-weight: bold;
   font-size: 18px;
-  color: #111111;
+  color: var(--color-text-primary);
 }
 
 .nav-wrapper {
@@ -45,7 +66,7 @@ body {
 .nav-links a {
   position: relative;
   text-decoration: none;
-  color: #555555;
+  color: var(--color-text-secondary);
   font-size: 14px;
   padding: 6px 4px;
   transition: color 0.3s ease;
@@ -53,7 +74,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #111111;
+  color: var(--color-text-primary);
 }
 
 .nav-links a::after {
@@ -63,7 +84,7 @@ body {
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background: #111111;
+  background: var(--color-card-dark);
   transition: 0.3s;
 }
 
@@ -72,7 +93,7 @@ body {
 }
 
 .nav-links .active {
-  color: #111111;
+  color: var(--color-text-primary);
   font-weight: 600;
 }
 
@@ -81,11 +102,11 @@ body {
 }
 
 .logout {
-  color: #E05A5A;
+  color: var(--color-logout);
 }
 
 .logout:hover {
-  color: #c04444;
+  color: #9a3a26;
 }
 
 .timetable {
@@ -94,19 +115,19 @@ body {
   padding-left: 50px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #FFFFFF;
-  border: 1px solid #E5E5E5;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   margin-top: 20px;
   margin: 10px;
   height: 90px;
 }
 
 .timetable:hover {
-  background-color: #F2F2F2;
+  background-color: var(--color-bar-selected);
   margin: 0px;
   height: 100px;
   transition: 0.3s;
-  box-shadow: 4px 2px 12px #E5E5E5;
+  box-shadow: 4px 2px 12px var(--color-border);
 }
 
 .table {
@@ -114,8 +135,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
-  background-color: #2B2B2B;
-  border: 1.5px solid #3D3D3D;
+  background-color: var(--color-card-dark);
+  border: 1.5px solid var(--color-bar-dark);
 }
 
 .week {
@@ -124,14 +145,14 @@ body {
   width: 300px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: larger;
-  color: #FFFFFF;
+  color: var(--color-text-on-dark);
 }
 
 .sem {
   width: 300px;
   font-size: small;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #BEBEBE;
+  color: var(--color-muted);
 }
 
 .p-btns {
@@ -140,8 +161,8 @@ body {
   gap: 40px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #FFFFFF;
-  border: 1px solid #E5E5E5;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   margin-top: 20px;
   margin: 10px;
   margin-left: 10px;
@@ -153,29 +174,29 @@ body {
   cursor: pointer;
   font-size: medium;
   transition: 0.2s;
-  border: 1px solid #3D3D3D;
-  background-color: #FFFFFF;
-  color: #111111;
+  border: 1px solid var(--color-bar-dark);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
 }
 
 .btn:hover {
-  border: 1px solid #111111;
-  color: #FFFFFF;
-  background-color: #2B2B2B;
+  border: 1px solid var(--color-bar-dark);
+  color: var(--color-text-on-dark);
+  background-color: var(--color-card-dark);
   transform: translateY(-5px);
-  box-shadow: 0 0 12px #606060;
+  box-shadow: 0 0 12px var(--color-bar-mid);
 }
 
 .btn:active {
-  background-color: #1A1A1A;
+  background-color: var(--color-bar-dark);
   transition: 0.2s;
 }
 
 .schedule {
   padding: 20px;
   border-radius: 10px;
-  background-color: #FFFFFF;
-  border: 1px solid #E5E5E5;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   margin-top: 20px;
   margin: 10px;
 }
@@ -183,40 +204,40 @@ body {
 .th1 {
   text-align: left;
   width: 100px;
-  color: #111111;
+  color: var(--color-text-primary);
 }
 
 .th2 {
   text-align: center;
-  color: #111111;
+  color: var(--color-text-primary);
 }
 
 .th3 {
   text-align: center;
   font-size: smaller;
   width: 150px;
-  color: #555555;
+  color: var(--color-text-secondary);
 }
 
 .theory {
   font-size: x-small;
   text-align: center;
-  color: #555555;
+  color: var(--color-text-secondary);
 }
 
 .td1 {
   text-align: center;
-  color: #555555;
+  color: var(--color-text-secondary);
 }
 
 p {
-  border: 1px solid #3D3D3D;
+  border: 1px solid var(--color-bar-dark);
   width: 50px;
   padding: 5px 5px;
   border-radius: 10px;
   height: 20px;
   text-align: center;
-  background-color: #E05A5A;
-  color: #FFFFFF;
+  background-color: var(--color-card-dark);
+  color: var(--color-text-on-dark);
   margin: 0 auto;
 }

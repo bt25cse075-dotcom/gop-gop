@@ -1,21 +1,22 @@
 :root {
-  /* === Skillset Dashboard Palette === */
-  --color-sidebar: #1A1A1A;
-  --color-card-dark: #2B2B2B;
-  --color-bar-dark: #3D3D3D;
-  --color-bar-mid: #606060;
-  --color-surface: #FFFFFF;
-  --color-page-bg: #F2F2F2;
-  --color-border: #E5E5E5;
-  --color-muted: #BEBEBE;
-  --color-text-primary: #111111;
-  --color-text-secondary: #555555;
-  --color-text-on-dark: #FFFFFF;
-  --color-growth: #4CAF82;
-  --color-decline: #E05A5A;
-  --color-badge-dark: #1A1A1A;
-  --color-bar-selected: #D4D4D4;
-  --color-day-selected: #2B2B2B;
+  /* === Grievance Portal — Earthy Forest Palette === */
+  --color-sidebar:        #546B41;
+  --color-card-dark:      #546B41;
+  --color-bar-dark:       #3d4f30;
+  --color-bar-mid:        #99AD7A;
+  --color-surface:        #FFFFFF;
+  --color-page-bg:        #FFF8EC;
+  --color-border:         #e8dfc8;
+  --color-muted:          #DCCCAC;
+  --color-text-primary:   #2a3520;
+  --color-text-secondary: #6b7a5a;
+  --color-text-on-dark:   #FFF8EC;
+  --color-growth:         #4a8c5c;
+  --color-decline:        #c0513a;
+  --color-badge-dark:     #546B41;
+  --color-bar-selected:   #f0e9d8;
+  --color-day-selected:   #546B41;
+  --color-accent:         #99AD7A;
 }
 
 body {
@@ -25,85 +26,106 @@ body {
   background-color: var(--color-page-bg);
 }
 
+/* Portal header */
 .portal {
-  background-color: var(--color-card-dark);
-  padding: 10px;
+  background: linear-gradient(135deg, #546B41 0%, #3d4f30 100%);
+  padding: 18px 20px;
   margin: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  height: 80px;
+  align-items: flex-start;
+  border-radius: 16px;
+  height: 88px;
   border: 1.5px solid var(--color-bar-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Decorative circle on header */
+.portal::after {
+  content: '';
+  position: absolute;
+  right: -20px; top: -20px;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: rgba(153, 173, 122, 0.18);
 }
 
 .portal h1 {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'DM Serif Display', 'Georgia', serif;
+  font-size: 20px;
   color: var(--color-text-on-dark);
+  letter-spacing: 0.3px;
 }
 
 .portal p {
-  margin: 0;
+  margin: 3px 0 0;
   padding: 0;
   color: var(--color-muted);
+  font-size: 13px;
 }
 
+/* Switch tabs */
 .switch {
   background-color: var(--color-surface);
-  height: 45px;
-  width: 300px;
-  padding: 10px;
+  height: 56px;
+  padding: 8px 12px;
   margin: 15px 20px 0;
-  border-radius: 15px;
+  border-radius: 14px;
   border: 1px solid var(--color-border);
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
 }
 
 .switch button {
   background: var(--color-card-dark);
-  border: 1.5px solid var(--color-bar-dark);
-  height: 40px;
+  border: none;
+  height: 38px;
   color: var(--color-text-on-dark);
-  padding: 6px 16px;
-  border-radius: 8px;
+  padding: 0 18px;
+  border-radius: 9px;
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+
+.switch button.active {
+  background: var(--color-bar-dark);
+  box-shadow: 0 2px 8px rgba(84, 107, 65, 0.35);
 }
 
 .switch button:hover {
-  transform: translateY(-5px);
-  transition: .7s;
-  box-shadow: 0 0 12px var(--color-bar-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(84, 107, 65, 0.3);
 }
 
-.switch button:active {
-  background-color: var(--color-sidebar);
-  transition: .5s;
-}
-
+/* Grievance cards */
 .g1, .g2, .g3 {
   background-color: var(--color-surface);
-  padding: 15px;
+  padding: 16px;
   margin: 15px 20px 0;
-  border-radius: 15px;
+  border-radius: 14px;
   gap: 10px;
   border: 1px solid var(--color-border);
+  transition: box-shadow .3s;
 }
 
 .g1:hover, .g2:hover, .g3:hover {
-  box-shadow: 4px 2px 12px var(--color-border);
-  transition: .7s;
+  box-shadow: 0 4px 20px rgba(84, 107, 65, 0.12);
 }
 
+/* Status row */
 .status {
-  margin: 0;
+  margin: 0 0 12px;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -111,59 +133,73 @@ body {
 .status p:first-child {
   color: var(--color-text-primary);
   font-weight: 600;
+  font-size: 15px;
 }
 
 .status p:nth-child(2) {
   border-radius: 30px;
   box-sizing: border-box;
-  padding: 5px 8px;
-  margin-top: 9px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
   border: none;
 }
 
 .status p:nth-child(3) {
   color: var(--color-text-secondary);
+  font-size: 13px;
 }
 
-.pending  { background: #F5E6C8; color: #7A5C1A; }
-.resolved { background: #C8EAD4; color: #1A5C30; }
-.progress { background: #C8D8F0; color: #1A3060; }
+/* Status badges */
+.pending  { background: #f5e9d0; color: #7a5010; }
+.resolved { background: #ddefd6; color: #2a5c20; }
+.progress { background: #d8e8f5; color: #1a3c70; }
 
+/* Grievance title */
 .reason h2 {
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0;
-  font-size: 23px;
+  font-family: 'DM Serif Display', 'Georgia', serif;
+  font-size: 22px;
   color: var(--color-text-primary);
 }
 
+/* Description box */
 .detail {
-  margin: 0;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0 0;
   background-color: var(--color-page-bg);
   border-radius: 10px;
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
+/* Admin reply box */
 .reply {
   margin: 10px 0 0;
-  padding: 7px;
+  padding: 12px;
   background-color: var(--color-bar-selected);
   border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);  /* accent stripe */
   border-radius: 10px;
 }
 
 .reply p:first-child {
-  font-weight: 800;
-  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
   padding: 0;
-  color: var(--color-text-primary);
-  letter-spacing: .8px;
+  color: var(--color-card-dark);
 }
 
 .reply p:nth-child(2) {
   margin: 0;
   padding: 0;
   color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
 }
