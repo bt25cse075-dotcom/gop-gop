@@ -1,22 +1,21 @@
 :root {
-  /* === PAR Timetable — Earthy Forest Palette === */
-  --color-sidebar:        #546B41;
-  --color-card-dark:      #546B41;
-  --color-bar-dark:       #3d4f30;
-  --color-bar-mid:        #99AD7A;
-  --color-surface:        #FFFFFF;
-  --color-page-bg:        #FFF8EC;
-  --color-border:         #e8dfc8;
-  --color-muted:          #DCCCAC;
-  --color-text-primary:   #2a3520;
-  --color-text-secondary: #6b7a5a;
-  --color-text-on-dark:   #FFF8EC;
-  --color-growth:         #4a8c5c;
-  --color-decline:        #c0513a;
-  --color-bar-selected:   #f0e9d8;
-  --color-day-selected:   #546B41;
-  --color-accent:         #99AD7A;
-  --color-logout:         #c0513a;
+  --color-sidebar:        #1a1a1a;
+  --color-card-dark:      #2c2c2c;
+  --color-bar-dark:       #111111;
+  --color-bar-mid:        #555555;
+  --color-surface:        #ffffff;
+  --color-page-bg:        #f5f5f5;
+  --color-border:         #d0d0d0;
+  --color-muted:          #aaaaaa;
+  --color-text-primary:   #1a1a1a;
+  --color-text-secondary: #666666;
+  --color-text-on-dark:   #ffffff;
+  --color-growth:         #2a7a4a;
+  --color-decline:        #c0392b;
+  --color-bar-selected:   #f0f0f0;
+  --color-day-selected:   #2c2c2c;
+  --color-accent:         #444444;
+  --color-logout:         #c0392b;
 }
 
 * {

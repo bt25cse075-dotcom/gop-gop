@@ -6,8 +6,12 @@
     <title>grevence</title>
     <link rel="stylesheet" href="stylegriv.css">
 </head>
+
 <body>
+    
     <div class="griv">
+        <!--sidebar -->
+
     <div class="portal">
         <h1>Grievance Portal</h1>
         <p>Submit and track your complaints & requests</p>
