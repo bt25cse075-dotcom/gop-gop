@@ -1,0 +1,204 @@
+:root {
+  --color-sidebar:        #1a1a1a;
+  --color-card-dark:      #2c2c2c;
+  --color-bar-dark:       #111111;
+  --color-bar-mid:        #555555;
+  --color-surface:        #ffffff;
+  --color-page-bg:        #f5f5f5;
+  --color-border:         #d0d0d0;
+  --color-muted:          #aaaaaa;
+  --color-text-primary:   #1a1a1a;
+  --color-text-secondary: #666666;
+  --color-text-on-dark:   #ffffff;
+  --color-growth:         #2a7a4a;
+  --color-decline:        #c0392b;
+  --color-badge-dark:     #2c2c2c;
+  --color-bar-selected:   #f0f0f0;
+  --color-day-selected:   #2c2c2c;
+  --color-accent:         #444444;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--color-page-bg);
+}
+
+/* Portal header */
+.portal {
+   background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  border: 1.5px solid #111111;
+  padding: 18px 20px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 16px;
+  height: 88px;
+  border: 1.5px solid var(--color-bar-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Decorative circle on header */
+.portal::after {
+  content: '';
+  position: absolute;
+  right: -20px; top: -20px;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: rgba(153, 173, 122, 0.18);
+}
+
+.portal h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Serif Display', 'Georgia', serif;
+  font-size: 20px;
+  color: var(--color-text-on-dark);
+  letter-spacing: 0.3px;
+}
+
+.portal p {
+  margin: 3px 0 0;
+  padding: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+/* Switch tabs */
+.switch {
+  background-color: var(--color-surface);
+  height: 56px;
+  padding: 8px 12px;
+  margin: 15px 20px 0;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.switch button {
+  background: var(--color-card-dark);
+  border: none;
+  height: 38px;
+  color: var(--color-text-on-dark);
+  padding: 0 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+
+.switch button.active {
+  background: var(--color-bar-dark);
+  box-shadow: 0 2px 8px rgba(84, 107, 65, 0.35);
+}
+
+.switch button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(84, 107, 65, 0.3);
+}
+
+/* Grievance cards */
+.g1, .g2, .g3 {
+  background-color: var(--color-surface);
+  padding: 16px;
+  margin: 15px 20px 0;
+  border-radius: 14px;
+  gap: 10px;
+  border: 1px solid var(--color-border);
+  transition: box-shadow .3s;
+}
+
+.g1:hover, .g2:hover, .g3:hover {
+  box-shadow: 0 4px 20px rgba(84, 107, 65, 0.12);
+}
+
+/* Status row */
+.status {
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status p:first-child {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.status p:nth-child(2) {
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+}
+
+.status p:nth-child(3) {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+/* Status badges */
+.pending  { background: #f5e9d0; color: #7a5010; }
+.resolved { background: #ddefd6; color: #2a5c20; }
+.progress { background: #d8e8f5; color: #1a3c70; }
+
+/* Grievance title */
+.reason h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: 'DM Serif Display', 'Georgia', serif;
+  font-size: 22px;
+  color: var(--color-text-primary);
+}
+
+/* Description box */
+.detail {
+  padding: 12px;
+  margin: 10px 0 0;
+  background-color: var(--color-page-bg);
+  border-radius: 10px;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Admin reply box */
+.reply {
+  margin: 10px 0 0;
+  padding: 12px;
+  background-color: var(--color-bar-selected);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);  /* accent stripe */
+  border-radius: 10px;
+}
+
+.reply p:first-child {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+  padding: 0;
+  color: var(--color-card-dark);
+}
+
+.reply p:nth-child(2) {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}

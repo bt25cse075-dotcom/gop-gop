@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="timetable.js"></script>
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+    <div class="navbar">
+  <div class="logo"> Student Portal</div>
+
+  <div class="nav-wrapper">
+    <div class="nav-links">
+      <a>Dashboard</a>
+      <a class="active">TimeTable</a>
+      <a>Attendance</a>
+      <a>Teachers</a>
+      <a>Reschedule</a>
+      <a>Helpline</a>
+      <a class="logout">Logout</a>
+    </div>
+  </div>
+</div>
+
+    <div class="table">
+        <div class="week">WEEKLY TIMETABLE</div>
+    <div class="sem">AY 2025-2026 Semester 2nd.Batch B1</div>
+    </div>
+    <div class="p-btns">
+        <div class="p-btn btn" data-btn-num ="1">Monday</div>
+        <div class="p-btn btn" data-btn-num ="2">Tuesday</div>
+        <div class="p-btn btn" data-btn-num ="3">Wednesday</div>
+        <div class="p-btn btn" data-btn-num ="4">Thursday</div>
+        <div class="p-btn btn" data-btn-num ="5">Friday</div>
+        
+    </div>
+ <div class="p-btn--1 schedule">
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">09:00-10:00</th>
+           <th class="th2">MTTDE</th>
+           <th class="th3">by DR Daud ali</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory" ><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">10:00-11:00</th>
+           <th class="th2">Mechanical and Graphics</th>
+           <th class="th3">by DR Anup Naik</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+<div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">11:00-12:00</th>
+           <th class="th2">Applied Programming</th>
+           <th class="th3">by MS Ruchira </th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+    
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1" >12:00-01:00</th>
+           <th class="th2">BREAK</th>
+           <th class="th3" rowspan="2">enjoy</th>
+         </tr>
+         <tr>
+           
+           <td class="td1" > mess</td>
+           
+         </tr>
+       </table>
+    </div>
+    
+
+       <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">01:00-02:00</th>
+           <th class="th2">Data structure</th>
+           <th class="th3">by Dr neha</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> seminar hall</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    </div>
+
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">02:00-03:00</th>
+           <th class="th2">Applied Programming</th>
+           <th class="th3">by MS Ruchira</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> room no 301</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    </div>
+    
+
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">03:00-05:00</th>
+           <th class="th2">Data structure</th>
+           <th class="th3">by Dr neha</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> lab 3</td>
+           <td class="theory"><p>lab</p></td>
+         </tr>
+       </table>
+    </div>
+<hr>
+ </div>
+
+
+
+
+
+   <div class="p-btn--2 schedule">
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">09:00-10:00</th>
+           <th class="th2">MTTDE</th>
+           <th class="th3">by DR Daud ali</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory" ><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">10:00-11:00</th>
+           <th class="th2">Mechanical and Graphics</th>
+           <th class="th3">by DR Anup Naik</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+<div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">11:00-12:00</th>
+           <th class="th2">MTTDE</th>
+           <th class="th3">by DR Daud ali</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+    
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1" >12:00-01:00</th>
+           <th class="th2">BREAK</th>
+           <th class="th3" rowspan="2">enjoy</th>
+         </tr>
+         <tr>
+           
+           <td class="td1" > mess</td>
+           
+         </tr>
+       </table>
+    </div>
+    
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">01:00-02:00</th>
+           <th class="th2">Digital electronics</th>
+           <th class="th3">by DR Rashmi rajan</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    </div>
+    
+
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">02:00-04:00</th>
+           <th class="th2">Digital electronics</th>
+           <th class="th3">by DR Rashmi rajan</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> electronics lab</td>
+           <td class="theory"><p>lab</p></td>
+         </tr>
+       </table>
+    </div>
+<hr>
+ </div>
+
+
+
+   <div class="p-btn--3 schedule">
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">10:00-11:00</th>
+           <th class="th2">Digital electronics</th>
+           <th class="th3">by DR Rashmi rajan</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+<div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">11:00-12:00</th>
+           <th class="th2">Applied Programming</th>
+           <th class="th3">by MS Ruchira </th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+    
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1" >12:00-01:00</th>
+           <th class="th2">BREAK</th>
+           <th class="th3" rowspan="2">enjoy</th>
+         </tr>
+         <tr>
+           
+           <td class="td1" > mess</td>
+           
+         </tr>
+       </table>
+    </div>
+    
+
+       <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">01:00-02:00</th>
+           <th class="th2">Mecanics and graphic</th>
+           <th class="th3">by DR Anup Naik</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    </div>
+    
+
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">02:00-04:00</th>
+           <th class="th2">Communication</th>
+           <th class="th3">by DR Madhuri tayade</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> Communication lab</td>
+           <td class="theory"><p>lab</p></td>
+         </tr>
+       </table>
+    </div>
+<hr>
+ </div>
+
+
+
+
+   <div class="p-btn--4 schedule">
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">09:00-10:00</th>
+           <th class="th2">MTTDE</th>
+           <th class="th3">by DR Daud ali</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory" ><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">10:00-11:00</th>
+           <th class="th2">Digital electronics</th>
+           <th class="th3">by DR Rashmi rajan</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+<div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">11:00-12:00</th>
+           <th class="th2">Data structure</th>
+           <th class="th3">by Dr neha</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> seminar hall</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+    
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1" >12:00-01:00</th>
+           <th class="th2">BREAK</th>
+           <th class="th3" rowspan="2">enjoy</th>
+         </tr>
+         <tr>
+           
+           <td class="td1" > mess</td>
+           
+         </tr>
+       </table>
+    </div>
+    
+
+       <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">01:00-02:00</th>
+           <th class="th2">Communication </th>
+           <th class="th3">by DR Madhuri tayade</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    </div>
+
+    
+<hr>
+</div>
+
+
+
+
+   <div class="p-btn--5 schedule">
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">10:00-11:00</th>
+           <th class="th2">Communication </th>
+           <th class="th3">by DR Madhuri tayade</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> hall 1</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+<div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">11:00-12:00</th>
+           <th class="th2">Data structure</th>
+           <th class="th3">by Dr neha</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> seminar hall</td>
+           <td class="theory"><p>theory</p></td>
+         </tr>
+       </table>
+    
+    </div>
+
+    
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1" >12:00-01:00</th>
+           <th class="th2">BREAK</th>
+           <th class="th3" rowspan="2">enjoy</th>
+         </tr>
+         <tr>
+           
+           <td class="td1" > mess</td>
+           
+         </tr>
+       </table>
+    </div>
+
+    <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">01:00-03:00</th>
+           <th class="th2">Applied Programming</th>
+           <th class="th3"> by MS Ruchira </th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> lab 10 admin</td>
+           <td class="theory"><p>lab</p></td>
+         </tr>
+       </table>
+    </div>
+    
+
+
+     <div class="timetable">
+       <table>
+         <tr>
+           <th rowspan="2" class="th1">03:00-05:00</th>
+           <th class="th2">Mecanics and graphic</th>
+           <th class="th3"> by DR Anup Naik</th>
+         </tr>
+         <tr>
+           
+           <td class="td1"> Mecanics and graphic lab</td>
+           <td class="theory"><p>lab</p></td>
+         </tr>
+       </table>
+    </div>
+<hr>
+ </div>
+</body>
+</html>
