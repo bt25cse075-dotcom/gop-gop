@@ -8,7 +8,68 @@
 </head>
 
 <body>
-    
+    <div class="root">
+        <div class="sidebar">
+        <div class="sb-profile">
+          <div class="sb-avatar">Photo</div>
+          <div class="sb-profile-text">
+            <div class="sb-name"><?php echo $_SESSION['name'] ?></div>
+            <div class="sb-roll"><?php echo $_SESSION['role'] ?></div>
+            <div class="sb-inst">IIIT NAGPUR</div>
+            <div class="sb-sem">sem: 2nd</div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="sb-nav">
+          <a class="nav-item" href="home.html">🏠 Home</a>
+          <a
+            class="nav-item"
+            href="http://localhost/gop-gop/timetable/timetable.php"
+            >📅 Timetable</a
+          >
+          <a class="nav-item" href="../attendance/attendance.html"
+            >📊 Attendance</a
+          >
+          <a class="nav-item" href="../exams/exams.html"
+            >📄 Exam &amp; Results</a
+          >
+          <a
+            class="nav-item active"
+            href="http://localhost/gop-gop/grievence/grivence.php"
+            >📩 Grievance</a
+          >
+        </div>
+        <!-- Quick Stats -->
+        <div class="sb-quick-stats">
+          <div class="qs-title">QUICK STATS</div>
+          <div class="qs-row"><span>CGPA</span><span>Value</span></div>
+          <div class="qs-row"><span>Batch</span><span>CSE</span></div>
+          <div class="qs-row"><span>Year</span><span>2026</span></div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    <div class="root2">
+ <div class="topbar">
+      <div class="tb-logo">PAR — Portal for Academic Resources</div>
+      <div class="tb-page">Home</div>
+      <div class="tb-right">
+        <div class="tb-userinfo">
+          <div class="tb-name"><?php echo $_SESSION['name'] ?></div>
+          <div class="tb-role"><?php echo $_SESSION['role'] ?></div>
+        </div>
+        <div class="tb-avatar">Photo</div>
+        <div class="tb-logout"> <a href="http://localhost/gop-gop/login%20student/login.php">logout</a> </div>
+      </div>
+    </div>
+
     <div class="griv">
         <!--sidebar -->
 
@@ -89,6 +150,6 @@ water cooler is not working in admin building
 <p>querry has been registered we will look into it</p>
 </div>
     </div>
-    </div>
+    </div> </div>
 </body>
 </html>
