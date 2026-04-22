@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,16 +24,16 @@
 
         <!-- Navigation -->
         <div class="sb-nav">
-          <a class="nav-item" href="home.html">🏠 Home</a>
+          <a class="nav-item" href="http://localhost/gop-gop/dashboard2/">🏠 Home</a>
           <a
             class="nav-item"
             href="http://localhost/gop-gop/timetable/timetable.php"
             >📅 Timetable</a
           >
-          <a class="nav-item active" href="../attendance/attendance.html"
+          <a class="nav-item active" href="http://localhost/gop-gop/attendnce/attendance.php"
             >📊 Attendance</a
           >
-          <a class="nav-item" href="../exams/exams.html"
+          <a class="nav-item" href="http://localhost/gop-gop/marks/marks.php"
             >📄 Exam &amp; Results</a
           >
           <a
@@ -77,12 +78,12 @@
             </div>
 
             <div class="box1 sp2">
-              <div class="num">0</div>
+              <div class="num">2</div>
               <div class="over1">low subjects</div>
             </div>
 
             <div class="box1 sp3">
-              <div class="num"></div>
+              <div class="num">4</div>
               <div class="over1">Good standing</div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 include("config.php");
 if(isset($_POST["login"])){
     $email = $_POST["email"];
@@ -13,7 +13,7 @@ if(isset($_POST["login"])){
         $_SESSION["name"] = $login["name"];
         $_SESSION["role"] = $login["role"];
         $_SESSION["password"] = $password;
-  $role = $_SESSION["role"];
+        $role = $_SESSION["role"];
 if($selectedrole == "student") {
     header("location: http://localhost/gop-gop/dashboard2/");
     exit();
@@ -26,9 +26,18 @@ if($selectedrole == "student") {
     exit();
 }
     }
-    else{
-        $error = "invalid email or password";
+    else if(!$selectedrole) {
+        $error = "please select your user type";
 
+    }
+     else if(empty($email)) {
+        $error = "please enter email";
+    }
+     else if(empty($password)) {
+        $error = "please enter password";
+    }
+     else {
+        $error = "please enter valid email or password";
     }
 }
 ?>

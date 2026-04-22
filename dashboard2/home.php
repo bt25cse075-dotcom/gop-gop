@@ -1,4 +1,9 @@
-<?php session_start()?>
+<?php session_start();
+include("C:/xampp/htdocs/gop-gop/login student/config.php");
+
+$email = $_SESSION['email'];
+$result = mysqli_query($conn, "SELECT * FROM grade WHERE email = '$email' LIMIT 1");
+$grade = mysqli_fetch_assoc($result); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,16 +32,16 @@
  
     <!-- Navigation -->
  <div class="sb-nav">
-  <a class="nav-item active" href="home.html">🏠 Home</a>
+  <a class="nav-item active" href="http://localhost/gop-gop/dashboard2/">🏠 Home</a>
 <a class="nav-item" href="http://localhost/gop-gop/timetable/timetable.php">📅 Timetable</a>
-<a class="nav-item" href="../attendance/attendance.html">📊 Attendance</a>
-<a class="nav-item" href="../exams/exams.html">📄 Exam &amp; Results</a>
+<a class="nav-item" href="http://localhost/gop-gop/attendnce/attendance.php">📊 Attendance</a>
+<a class="nav-item" href="http://localhost/gop-gop/marks/marks.php">📄 Exam &amp; Results</a>
 <a class="nav-item" href="http://localhost/gop-gop/grievence/grivence.php">📩 Grievance</a>
 </div>
     <!-- Quick Stats -->
     <div class="sb-quick-stats">
       <div class="qs-title">QUICK STATS</div>
-      <div class="qs-row"><span>CGPA</span><span>Value</span></div>
+      <div class="qs-row"><span>CGPA</span><span><?php echo $grade['sgpa'] ?></span></div>
       <div class="qs-row"><span>Batch</span><span>CSE</span></div>
       <div class="qs-row"><span>Year</span><span>2026</span></div>
     </div>
@@ -92,7 +97,7 @@
       <div class="metrics-row">
         <div class="metric-card">
           <div class="mc-icon">🏆</div>
-          <div class="mc-num">CGPA Value</div>
+          <div class="mc-num"><?php echo $grade['sgpa'] ?></div>
           <div class="mc-label">CGPA</div>
         </div>
         <div class="metric-card">

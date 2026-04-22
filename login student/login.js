@@ -4,7 +4,7 @@ buttons.forEach(btn => {
     btn.addEventListener("click", function() {
         buttons.forEach(btn => btn.classList.remove("active"));
         this.classList.add("active");
-        role.value = this.innerText.toLowerCase(); // sets "student", "faculty" or "admin"
+        role.value = this.innerText.toLowerCase();
     });
 });
 

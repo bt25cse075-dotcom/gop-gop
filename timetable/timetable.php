@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>Document</title>
     <script defer src="timetable.js"></script>
     <link rel="stylesheet" href="timetable.css">
+    
 </head>
 <body>
 
@@ -27,10 +29,10 @@
  
     <!-- Navigation -->
  <div class="sb-nav">
-  <a class="nav-item " href="home.html">🏠 Home</a>
+  <a class="nav-item " href="http://localhost/gop-gop/dashboard2/">🏠 Home</a>
 <a class="nav-item active" href="http://localhost/gop-gop/timetable/timetable.php">📅 Timetable</a>
-<a class="nav-item" href="../attendance/attendance.html">📊 Attendance</a>
-<a class="nav-item" href="../exams/exams.html">📄 Exam &amp; Results</a>
+<a class="nav-item" href="http://localhost/gop-gop/attendnce/attendance.php">📊 Attendance</a>
+<a class="nav-item" href="http://localhost/gop-gop/marks/marks.php">📄 Exam &amp; Results</a>
 <a class="nav-item" href="http://localhost/gop-gop/grievence/grivence.php">📩 Grievance</a>
 </div>
     <!-- Quick Stats -->
