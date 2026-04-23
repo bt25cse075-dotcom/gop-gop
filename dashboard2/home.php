@@ -118,23 +118,154 @@ $grade = mysqli_fetch_assoc($result); ?>
         <!-- TODAY'S SCHEDULE -->
         <div class="card">
           <div class="card-title">📅 Today's Schedule</div>
-   
+    <div class="class-row">
+            <div class="cr-time">8:00 - 9:00</div>
+            <div class="cr-info">
+              <div class="cr-sub">MTTDE</div>
+              <div class="cr-meta">HALL 1 &nbsp;·&nbsp; By DR Daud Ali</div>
+            </div>
+            <div class="cr-badge">Lecture</div>
+          </div>
+ 
+          <div class="class-row">
+            <div class="cr-time">9:00 – 10:00</div>
+            <div class="cr-info">
+              <div class="cr-sub">Data Structures &amp; Algorithms</div>
+              <div class="cr-meta">SEMINAR HALL &nbsp;·&nbsp; By DR Neha Kasturia</div>
+            </div>
+            <div class="cr-badge">Lecture</div>
+          </div>
+ 
+          <div class="class-row cancelled">
+            <div class="cr-time">10:00 – 11:00</div>
+            <div class="cr-info">
+              <div class="cr-sub">Digital electronics </div>
+              <div class="cr-meta">HALL 1 &nbsp;·&nbsp; By Dr Rashmi Ranjan</div>
+            </div>
+            <div class="cr-badge cr-badge--cancel">Cancelled</div>
+          </div>
+ 
+          <div class="class-row">
+            <div class="cr-time">11:00 – 12:00</div>
+            <div class="cr-info">
+              <div class="cr-sub">Mechanics & graphics</div>
+              <div class="cr-meta">HALL 1 &nbsp;·&nbsp; By Dr Anup Rjak</div>
+            </div>
+            <div class="cr-badge">Lecture</div>
+          </div>
+      <div class="class-break">
+            <div class="cr-time">12:00 – 01:00</div>
+            <div class="cr-info">
+              <div class="cr-sub"> BREAK </div>
+              <div class="cr-meta"></div>
+            </div>
+            <div class="cr-badge">RELAX</div>
+          </div>
+ 
+          <div class="class-row">
+            <div class="cr-time">2:00 – 4:00</div>
+            <div class="cr-info">
+              <div class="cr-sub">DSA Lab</div>
+              <div class="cr-meta">Lab 03 &nbsp;·&nbsp; By Dr Neha Kashturia</div>
+            </div>
+            <div class="cr-badge cr-badge--lab">Lab</div>
+          </div>
         </div>
  
         <!-- ATTENDANCE -->
-        <div class="card">
+         <div class="card">
           <div class="card-title">📊 Attendance</div>
-          <div class="ring">Circular Ring Chart — Overall Attendance %</div>
-          <div class="alert-box">⚠ Alert Message — Low or Good Attendance</div>
-          <div class="bar-row">Subject Code &nbsp;|&nbsp; Progress Bar &nbsp;|&nbsp; %</div>
-          <div class="bar-row">Subject Code &nbsp;|&nbsp; Progress Bar &nbsp;|&nbsp; %</div>
-          <div class="bar-row">Subject Code &nbsp;|&nbsp; Progress Bar &nbsp;|&nbsp; %</div>
-          <div class="bar-row">Subject Code &nbsp;|&nbsp; Progress Bar &nbsp;|&nbsp; %</div>
-          <div class="bar-row">Subject Code &nbsp;|&nbsp; Progress Bar &nbsp;|&nbsp; %</div>
+ 
+          <div class="ring-wrap">
+            <canvas id="ring-canvas" width="110" height="110"></canvas>
+            <div class="ring-label">
+              <div class="ring-pct" id="ring-pct-text">0%</div>
+              <div class="ring-sub">Overall</div>
+            </div>
+          </div>
+ 
+          <div class="att-alert good">✅ Attendance is Good</div>
+ 
+          <div id="att-bars"></div>
         </div>
  
       </div>
+    </div>
+  </div>
+</div>
  
+<script>
+  // ── Static data ──────────────────────────────
+  const overall = 86;
+ 
+  const subjects = [
+    { code: "MAL-101", pct: 92 },
+    { code: "CSL-302", pct: 88 },
+    { code: "CSL-103", pct: 72 },
+    { code: "BEL-101", pct: 85 },
+    { code: "ECL-102", pct: 68 },
+  ];
+ 
+  // ── Ring chart ───────────────────────────────
+  function drawRing(pct) {
+    const canvas = document.getElementById("ring-canvas");
+    const ctx = canvas.getContext("2d");
+    const cx = 55, cy = 55, r = 42, lw = 10;
+ 
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+ 
+    // background track
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, 2 * Math.PI);
+    ctx.strokeStyle = "#e8e8e8";
+    ctx.lineWidth = lw;
+    ctx.stroke();
+ 
+    // filled arc
+    const start = -Math.PI / 2;
+    const end   = start + (2 * Math.PI * pct / 100);
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, start, end);
+    ctx.strokeStyle = "#4a90a4";
+    ctx.lineWidth = lw;
+    ctx.lineCap = "round";
+    ctx.stroke();
+ 
+    document.getElementById("ring-pct-text").textContent = pct + "%";
+  }
+ 
+  // animate 0 → 86
+  let current = 0;
+  const timer = setInterval(() => {
+    current = Math.min(current + 2, overall);
+    drawRing(current);
+    if (current >= overall) clearInterval(timer);
+  }, 16);
+ 
+  // ── Progress bars ────────────────────────────
+  const container = document.getElementById("att-bars");
+ 
+  subjects.forEach(s => {
+    const isLow = s.pct < 75;
+    const row = document.createElement("div");
+    row.className = "att-bar-row";
+    row.innerHTML = `
+      <div class="att-code">${s.code}</div>
+      <div class="att-bar-track">
+        <div class="att-bar-fill ${isLow ? "low" : ""}" id="bar-${s.code}"></div>
+      </div>
+      <div class="att-pct ${isLow ? "low" : ""}">${s.pct}%</div>
+    `;
+    container.appendChild(row);
+  });
+ 
+  // slide bars in after paint
+  setTimeout(() => {
+    subjects.forEach(s => {
+      document.getElementById("bar-" + s.code).style.width = s.pct + "%";
+    });
+  }, 100);
+</script>
     </div>
   </div>
 </div>

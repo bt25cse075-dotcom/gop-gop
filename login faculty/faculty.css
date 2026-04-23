@@ -1,0 +1,40 @@
+
+
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background: beige;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: lightgreen;
+            color: white;
+            padding: 12px;
+           
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        tr:hover {
+            background-color: rgb(236, 233, 233);
+           ;
+        }
+
+        h2 {
+            text-align: center;
+        }
+        .heading{
+          
+            display: flex;
+            justify-content: center;
+        text-decoration: underline;
+        font-family:'Times New Roman', Times, serif;
+   font-size: xxx-large;
+        }

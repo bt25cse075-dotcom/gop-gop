@@ -9,7 +9,10 @@ body {
   align-items: center;
   font-family: 'Poppins', sans-serif;
   padding: 20px 0;
-    background-image: url('login student\WhatsApp Image 2026-04-22 at 9.08.11 PM.jpeg');
+  background-image: url('my.jpg');
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .container {
