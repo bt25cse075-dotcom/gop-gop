@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("C:/xampp/htdocs/gop-gop/login student/config.php");
+include("../config.php");
 
 $email = $_SESSION['email'];
 $result = mysqli_query($conn, "SELECT * FROM grade WHERE email = '$email' LIMIT 1");

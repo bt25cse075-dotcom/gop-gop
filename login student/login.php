@@ -1,5 +1,6 @@
 
-<?php session_start();?>
+<?php session_start();
+ include('../config.php')?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -13,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <?php include("data.php"); ?>
+  <?php include("../data.php"); ?>
     <div class="container">
         <div class="left">
            <div class="logo">

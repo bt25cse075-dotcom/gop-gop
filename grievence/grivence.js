@@ -1,4 +1,3 @@
-let griv = [];
 
 const listView = document.getElementById("listView");
 const formview = document.getElementById("formView");
@@ -20,6 +19,7 @@ document.getElementById("cancelBtn").addEventListener("click", function () {
     formview.style.display = "none";
     listView.style.display = "block";
 });
+let griv = [];
 
 // Create card function
 function createCard(newgriv) {

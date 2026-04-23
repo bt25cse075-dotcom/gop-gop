@@ -122,7 +122,7 @@
                     </div>
                 </div>
 
-                <!-- ── New Grievance Form View ── -->
+                 <!-- New Grievance Form View  -->
                 <div id="formView" style="display:none;">
                     <div class="form-header">
                         <h1>New Grievance</h1>
